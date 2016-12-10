@@ -15,6 +15,8 @@ class MyCanvas(Canvas):
         self.parent = parent
 
         self.paths = []
+
+        # TODO: implement aesthetic color choice
         for col in ["red", "green", "blue", "cyan", "yellow"]:
             self.paths.append(Path(width, height, color=col))
 

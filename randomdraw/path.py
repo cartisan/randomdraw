@@ -2,6 +2,7 @@ import random
 
 
 class Path(object):
+    # TODO: Implement different characters and predator behavior
     def __init__(self, canvas_width, canvas_height, color, thickness=60):
         self.x = random.randint(0, canvas_width)
         self.y = random.randint(0, canvas_height)
@@ -13,6 +14,11 @@ class Path(object):
                            self.x + self.thickness, self.y + self.thickness,
                            fill=self.color, outline='')
 
+        self._move(canvas)
+
+    def _move(self, canvas):
+        # TODO: implement velocity and inertia... elipsis should change with
+        #       velocity, too
         delta = self.thickness / 2
 
         # make sure we don't step outside the canvas
